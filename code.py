@@ -138,7 +138,7 @@ while not board.is_checkmate() or not board.is_stalemate():
             board.push(movetoplay)
             break
         else:
-            print("illegal move")
+            print("illegal/invalid move")
             dot()
             dot()
             dot()
