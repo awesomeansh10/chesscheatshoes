@@ -126,13 +126,14 @@ while not board.is_checkmate() or not board.is_stalemate():
     
     while True:
         movetoplaystring = inputmove()
-        if movetoplaystring != "replay":
-            movetoplay = chess.Move.from_uci(movetoplaystring)
         movetoplaystring1 = movetoplaystring[0]+movetoplaystring[1]
         movetoplaystring2 = movetoplaystring[2]+movetoplaystring[3]
+        if movetoplaystring != "replay" and movetoplaystring1 != movetoplaystring2:
+            movetoplay = chess.Move.from_uci(movetoplaystring)
 
         if movetoplaystring == "replay":
             outputmove(moveinnumbers)
+            continue
         elif movetoplay in board.legal_moves and movetoplaystring1 != movetoplaystring2:
             board.push(movetoplay)
             break
