@@ -15,6 +15,7 @@ dot_timeout = 0.3
 dash_timeout = 0.8
 current_letter = ""
 
+
 #morse code dictionary 
 morse = {' ': ' ',
         ".": '1',
