@@ -29,5 +29,5 @@ To send coordinates press the button in different patterns:
 Wait until there is a confirmation buzz before submitting the next number. If there is an unrecognised input, there will be 2 longer buzzes. If after all 4 numbers are entered there is an illegal move entered, there will be a series of short buzzes before allowing you to reenter the opponent move. 
 
 # playing moves
-After a move is successfully entered, the vibration motor will reply with a move to play in the same 4 number format. 
+After a move is successfully entered, the vibration motor will reply with a move to play in the same 4 number format. To replay the last move, enter --- instead of the first number for your next move
 
