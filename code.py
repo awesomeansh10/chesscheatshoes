@@ -25,7 +25,8 @@ morse = {' ': ' ',
         '-.': '5',
         '-..': '6',
         '-...': '7',
-        '--': '8'}
+        '--': '8',
+        '---': 'replay',}
 
 morsereversed = {' ': ' ',
         "1": '.',
@@ -52,7 +53,7 @@ def dash():
 
 
 def outputmove(movecords):
-
+    print("outputting move")
     #send the move to output
     movecordsstring = str(movecords)
     for letter in movecordsstring:
@@ -104,10 +105,10 @@ def inputmove():
     move = ""
 
     move += letters[int(inputcharacter())-1]
-    move += inputcharacter()
-    move += letters[int(inputcharacter())-1]
-    move += inputcharacter()
-
+    if move != "replay":
+        move += inputcharacter()
+        move += letters[int(inputcharacter())-1]
+        move += inputcharacter()
     print("you input "+move)
     return move
 
@@ -120,11 +121,17 @@ board = chess.Board()
 
 dash()
 
+moveinnumbers = ""
 while not board.is_checkmate() or not board.is_stalemate(): 
     
     while True:
-        movetoplay = chess.Move.from_uci(inputmove())
-        if movetoplay in board.legal_moves:
+        movetoplaystring = inputmove()
+        if movetoplaystring != "replay":
+            movetoplay = chess.Move.from_uci(movetoplaystring)
+            
+        if movetoplaystring == "replay":
+            outputmove(moveinnumbers)
+        elif movetoplay in board.legal_moves and movetoplaystring[0] != movetoplaystring[2] and movetoplaystring[1] != movetoplaystring[3]:
             board.push(movetoplay)
             break
         else:
