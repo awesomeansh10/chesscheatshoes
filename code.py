@@ -124,6 +124,16 @@ board = chess.Board()
 dash()
 
 moveinnumbers = ""
+
+#is white or black 
+print("is white or black")
+if(inputcharacter() == "--"):
+    print("white")
+    thefirstmove = inputmove()
+    movetoplay = chess.Move.from_uci(moveinnumbers)
+    board.push(movetoplay)
+else: 
+    print("playing black skipping first")
 while not board.is_checkmate() or not board.is_stalemate(): 
     
     while True:
