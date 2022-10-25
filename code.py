@@ -129,12 +129,12 @@ moveinnumbers = ""
 print("is white or black")
 if(inputcharacter() == "8"):
     print("white")
-    thefirstmove = inputmove()
-    movetoplay = chess.Move.from_uci(thefirstmove)
+    movetoplay = chess.Move.from_uci("e2e4")
     board.push(movetoplay)
+    dash()
 else: 
     print("playing black skipping first")
-
+    dot()
 while not board.is_checkmate() or not board.is_stalemate(): 
     
     while True:
