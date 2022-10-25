@@ -103,9 +103,9 @@ def inputcharacter():
 def inputmove():
     letters = ["a","b","c","d","e","f","g","h"]
     move = ""
-
-    move += letters[int(inputcharacter())-1]
-    if move != "replay":
+    input1 = inputcharacter()
+    if input1 != "replay":
+        move += letters[int(input1)-1]
         move += inputcharacter()
         move += letters[int(inputcharacter())-1]
         move += inputcharacter()
