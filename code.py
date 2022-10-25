@@ -109,6 +109,8 @@ def inputmove():
         move += inputcharacter()
         move += letters[int(inputcharacter())-1]
         move += inputcharacter()
+    else:
+        move = "replay"
     print("you input "+move)
     return move
 
