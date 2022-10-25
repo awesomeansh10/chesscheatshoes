@@ -5,7 +5,7 @@ Designed to be used with a raspberry Pi, button and vibration motor to subtley c
 
 
 # sending moves 
-At the start send -- to play as white. The default first move for white is e2e4. The input the opponent black's move and keep playing the game. Enter anything other than -- to play as black and skip the first e2e4 move.
+At the start send -- to play as white. A dash will confirm it. The default first move for white is e2e4. The input the opponent black's move and keep playing the game. Enter anything other than -- to play as black and skip the first e2e4 move. A dot will confirm playing as black.
 Send opponent moves to the engine by sending coordinates. For example an opening move of e2 to e4 would be 5254. 
 To send coordinates press the button in different patterns:
 
