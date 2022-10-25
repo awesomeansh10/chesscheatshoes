@@ -1,5 +1,5 @@
-from operator import truediv
 import RPi.GPIO as GPIO
+import time
 Pin=17
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(Pin,GPIO.OUT)
