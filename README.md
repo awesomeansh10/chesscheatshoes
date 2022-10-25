@@ -3,9 +3,9 @@ Communicate with a chess engine with one button and a vibration motor
 
 Designed to be used with a raspberry Pi, button and vibration motor to subtley communicate with a chess engine concealed in your shoe. 
 
-Currently only works when playing black
 
 # sending moves 
+At the start send -- to play as white. The default first move for white is e2e4. The input the opponent black's move and keep playing the game. Enter anything other than -- to play as black and skip the first e2e4 move.
 Send opponent moves to the engine by sending coordinates. For example an opening move of e2 to e4 would be 5254. 
 To send coordinates press the button in different patterns:
 
